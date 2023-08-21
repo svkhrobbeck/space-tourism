@@ -1,0 +1,125 @@
+/* FONTS */
+@font-face {
+  font-family: "Bellefair";
+  src: url("../fonts/Bellefair-Regular.woff2") format("woff2"), url("../fonts/Bellefair-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"), url("../fonts/BarlowCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"), url("../fonts/BarlowCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.woff2") format("woff2"), url("../fonts/Barlow-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CUSTOM PROPS */
+:root {
+  --text-color: #d0d6f9;
+}
+
+/* GENERAL */
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 3px;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: "Barlow", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1415px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--mini {
+    @extend .container;
+    max-width: 1007px;
+  }
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4.7px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 64px;
+
+  b {
+    opacity: 0.25;
+  }
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
