@@ -118,6 +118,17 @@ body {
   }
 }
 
+.button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 #root {
   min-height: 100%;
   display: flex;
