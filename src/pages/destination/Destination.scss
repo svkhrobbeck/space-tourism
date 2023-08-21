@@ -1,11 +1,29 @@
 .destination {
   padding-top: 75px;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 40px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding-top: 24px;
+  }
 }
 
 .destination__container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1200px) {
+    justify-content: space-around;
+  }
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .destination__img {
@@ -13,10 +31,32 @@
   max-width: 445px;
   width: 100%;
   height: auto;
+
+  @media only screen and (max-width: 992px) {
+    margin-bottom: 50px;
+    margin-right: 0;
+    max-width: 400px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 370px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    max-width: 245px;
+  }
 }
 
 .destination__content {
   max-width: 445px;
+
+  @media only screen and (max-width: 992px) {
+    max-width: 768px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 576px;
+  }
 }
 
 .destination__tabs {
@@ -28,6 +68,11 @@
   letter-spacing: 2.7px;
   padding-bottom: 15px;
   margin-bottom: 37px;
+
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
 }
 
 .destination__tab {
@@ -66,13 +111,23 @@
   line-height: normal;
   margin-top: 0;
   margin-bottom: 23px;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 8px;
+    font-size: 80px;
+  }
 }
 
 .destination__desc {
   margin-top: 0;
   margin-bottom: 54px;
   font-size: 18px;
-  line-height: 32px;
+  line-height: normal;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
 }
 
 .destination__divider {
@@ -86,6 +141,10 @@
   display: flex;
   align-items: center;
   gap: 80px;
+
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+  }
 }
 
 .info__planet-destination__title {
