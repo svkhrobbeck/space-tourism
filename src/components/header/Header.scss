@@ -26,6 +26,19 @@
   padding: 0 165px 0 123px;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7px);
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: #979797;
+    width: 473px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% - 30px);
+  }
 }
 
 .sitenav__list {
@@ -43,7 +56,7 @@
   font-family: Barlow Condensed;
   letter-spacing: 2.7px;
 
-  &.active::after {
+  &::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -52,5 +65,15 @@
     width: 100%;
     height: 3px;
     background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 0.5;
+  }
+
+  &.active::after {
+    opacity: 1;
   }
 }
