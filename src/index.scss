@@ -116,6 +116,19 @@ body {
   b {
     opacity: 0.25;
   }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+    letter-spacing: 3.3px;
+    margin-bottom: 50px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 35px;
+  }
 }
 
 .button {
