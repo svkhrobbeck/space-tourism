@@ -1,0 +1,27 @@
+.bg {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: no-repeat center / cover;
+
+  &--home {
+    background-image: url("../images/home-bg.jpg");
+  }
+
+  &--destination {
+    background-image: url("../images/destination-bg.jpg");
+  }
+
+  &--crew {
+    background-image: url("../images/crew-bg.jpg");
+  }
+
+  &--technology {
+    background-image: url("../images/technology-bg.jpg");
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+}
