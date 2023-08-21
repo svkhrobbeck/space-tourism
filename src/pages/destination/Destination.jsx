@@ -1,11 +1,20 @@
 // styles
 import "./Destination.scss";
 
-import data from "../../data/destination.json";
+import { destinations } from "../../data/destination.json";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import useParams from "../../helpers/useParams";
 
 const Destination = () => {
-  const [selectedPlanet, setSelectedPlanet] = useState(data.destinations[0]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selected = destinations.find(item => item.name === searchParams.get("name"));
+  const [selectedPlanet, setSelectedPlanet] = useState(selected || destinations[0]);
+
+  const setPlanetDestination = planet => {
+    setSearchParams(useParams(searchParams, "name", planet.name));
+    setSelectedPlanet(planet);
+  };
 
   return (
     <section className="destination">
@@ -18,18 +27,18 @@ const Destination = () => {
         <img
           className="destination__img"
           src={selectedPlanet.images.png}
-          alt="moon"
+          alt={selectedPlanet.name}
           srcSet={selectedPlanet.images.png2x}
           width={445}
           height={445}
         />
         <div className="destination__content">
           <ul className="destination__tabs list">
-            {data.destinations.map(destination => (
+            {destinations.map(destination => (
               <li
                 className={`destination__tab ${selectedPlanet.name === destination.name ? "active" : ""}`}
                 key={destination.name}
-                onClick={() => setSelectedPlanet(destination)}
+                onClick={() => setPlanetDestination(destination)}
               >
                 {destination.name}
               </li>
