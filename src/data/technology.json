@@ -1,0 +1,34 @@
+{
+  "technology": [
+    {
+      "name": "Launch vehicle",
+      "images": {
+        "portrait": "./images/launch-vehicle-portrait.jpg",
+        "portrait2x": "./images/launch-vehicle-portrait@2x.png",
+        "landscape": "./images/launch-vehicle-landscape.jpg",
+        "landscape2x": "./images/launch-vehicle-landscape@2x.png"
+      },
+      "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+    },
+    {
+      "name": "Spaceport",
+      "images": {
+        "portrait": "./images/spaceport-portrait.jpg",
+        "portrait2x": "./images/spaceport-portrait@2x.png",
+        "landscape": "./images/spaceport-landscape.jpg",
+        "landscape2x": "./images/spaceport-landscape@2x.png"
+      },
+      "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+    },
+    {
+      "name": "Space capsule",
+      "images": {
+        "portrait": "./images/space-capsule-portrait.jpg",
+        "portrait2x": "./images/space-capsule-portrait@2x.png",
+        "landscape": "./images/space-capsule-landscape.jpg",
+        "landscape2x": "./images/space-capsule-landscape@2x.png"
+      },
+      "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+    }
+  ]
+}
