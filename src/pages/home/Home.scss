@@ -1,16 +1,59 @@
 .explore {
   padding-top: 250px;
+
+  @media only screen and (max-width: 1400px) {
+    padding-top: 160px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    padding-top: 100px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-top: 60px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 40px;
+  }
 }
 
 .explore__container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1440px) {
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .explore__content {
   max-width: 444px;
   margin-right: 35px;
+
+  @media only screen and (max-width: 992px) {
+    margin-right: 0;
+    margin-bottom: 120px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 155px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 80px;
+  }
 }
 
 .explore__title {
@@ -19,23 +62,40 @@
   text-transform: uppercase;
   font-size: 28px;
   letter-spacing: 4.7px;
+  line-height: normal;
   margin-top: 0;
   margin-bottom: 24px;
+
+  @media only screen and (max-width: 576px) {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 16px;
+  }
 }
 
 .explore__subtitle {
+  color: #fff;
   font-family: Bellefair;
   font-size: 150px;
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 24px;
+
+  @media only screen and (max-width: 576px) {
+    font-size: 80px;
+    line-height: 90px;
+    margin-bottom: 16px;
+  }
 }
 
 .explore__desc {
   margin: 0;
   font-size: 18px;
-  line-height: 32px;
+
+  @media only screen and (max-width: 576px) {
+    font-size: 15px;
+  }
 }
 
 .explore__link {
@@ -60,9 +120,32 @@
 
   &:hover {
     outline-width: 88px;
+
+    @media only screen and (max-width: 576px) {
+      outline-width: 55px;
+    }
   }
 
   &:active {
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 992px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 242px;
+    height: 242px;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
   }
 }
