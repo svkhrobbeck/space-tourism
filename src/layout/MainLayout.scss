@@ -7,18 +7,50 @@
 
   &--home {
     background-image: url("../images/home-bg.jpg");
+
+    @media only screen and (max-width: 768px) {
+      background-image: url("../images/home-bg-tablet.jpg");
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-image: url("../images/home-bg-mobile.jpg");
+    }
   }
 
   &--destination {
     background-image: url("../images/destination-bg.jpg");
+
+    @media only screen and (max-width: 768px) {
+      background-image: url("../images/destination-bg-tablet.jpg");
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-image: url("../images/destination-bg-mobile.jpg");
+    }
   }
 
   &--crew {
     background-image: url("../images/crew-bg.jpg");
+
+    @media only screen and (max-width: 768px) {
+      background-image: url("../images/crew-bg-tablet.jpg");
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-image: url("../images/crew-bg-mobile.jpg");
+    }
   }
 
   &--technology {
     background-image: url("../images/technology-bg.jpg");
+
+    @media only screen and (max-width: 768px) {
+      background-image: url("../images/technology-bg-tablet.jpg");
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-image: url("../images/technology-bg-mobile.jpg");
+    }
   }
 }
 
