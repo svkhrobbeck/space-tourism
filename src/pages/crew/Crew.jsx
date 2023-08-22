@@ -44,9 +44,9 @@ const Crew = () => {
             <img
               key={item.name}
               className={`crew__img ${selectedCrew.name === item.name ? "slide-up" : "visually-hidden"}`}
-              src={selectedCrew.images.png}
-              alt={selectedCrew.name}
-              srcSet={selectedCrew.images.png2x}
+              src={item.images.png}
+              alt={item.name}
+              srcSet={item.images.png2x}
             />
           ))}
         </div>
