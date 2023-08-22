@@ -51,7 +51,7 @@ const Crew = () => {
               className={`crew__img ${selectedCrew.name === item.name ? "slide-up" : "visually-hidden"}`}
               src={item.images.png}
               alt={item.name}
-              srcSet={item.images.png2x}
+              srcSet={`${item.images.png} 1x, ${item.images.png2x} 2x`}
             />
           ))}
         </div>

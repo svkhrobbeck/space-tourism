@@ -59,7 +59,7 @@ const Technology = () => {
                 }`}
                 src={item.images.portrait}
                 alt={item.name}
-                srcSet={item.images.portrait2x}
+                srcSet={`${item.images.portrait} 1x, ${item.images.portrait2x} 2x`}
               />
               <img
                 className={`technology__img technology__img--landscape ${
@@ -67,7 +67,7 @@ const Technology = () => {
                 }`}
                 src={item.images.landscape}
                 alt={item.name}
-                srcSet={item.images.landscape2x}
+                srcSet={`${item.images.landscape} 1x, ${item.images.landscape2x} 2x`}
               />
             </Fragment>
           ))}

@@ -34,7 +34,7 @@ const Destination = () => {
             className={`destination__img ${selectedPlanet.name === destination.name ? "slide-up" : "visually-hidden"}`}
             src={destination.images.png}
             alt={destination.name}
-            srcSet={destination.images.png2x}
+            srcSet={`${destination.images.png} 1x, ${destination.images.png2x} 2x`}
             width={445}
             height={445}
             key={destination.name}
