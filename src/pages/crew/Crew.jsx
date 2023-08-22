@@ -21,7 +21,7 @@ const Crew = () => {
   return (
     <section className="crew slide-up">
       <Helmet>
-        <title>Space Tourism | Crew</title>
+        <title>Space Tourism | {selectedCrew.name}</title>
       </Helmet>
 
       <div className="container">

@@ -20,7 +20,7 @@ const Technology = () => {
   return (
     <section className="technology slide-up">
       <Helmet>
-        <title>Space Tourism | Technology</title>
+        <title>Space Tourism | {selectedTechnology.name}</title>
       </Helmet>
 
       <div className="container">

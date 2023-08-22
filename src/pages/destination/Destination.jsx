@@ -20,7 +20,7 @@ const Destination = () => {
   return (
     <section className="destination slide-up">
       <Helmet>
-        <title>Space Tourism | Destination</title>
+        <title>Space Tourism | {selectedPlanet.name}</title>
       </Helmet>
 
       <div className="container">
