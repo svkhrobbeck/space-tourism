@@ -16,10 +16,28 @@
   display: flex;
   align-items: flex-end;
   flex-grow: 1;
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .crew__content {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 94px;
+
+  @media only screen and (max-width: 576px) {
+    padding-bottom: 104px;
+    border-top: 1px solid #383b4b;
+    padding-top: 33px;
+  }
 }
 
 .crew__role {
@@ -32,6 +50,16 @@
   opacity: 0.5;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
 }
 
 .crew__name {
@@ -43,6 +71,16 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
 }
 
 .crew__bio {
@@ -52,12 +90,37 @@
   font-family: Barlow;
   font-size: 18px;
   line-height: 32px;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
 }
 
 .crew__paginations {
   display: flex;
   align-items: center;
   gap: 21px;
+
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 576px) {
+    order: -1;
+    margin-bottom: 32px;
+  }
 }
 
 .crew__pagination {
@@ -75,10 +138,32 @@
   &.active {
     opacity: 1;
   }
+
+  @media only screen and (max-width: 992px) {
+    width: 12px;
+    height: 12px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .crew__img {
   max-width: 550px;
   width: 100%;
   height: auto;
+
+  @media only screen and (max-width: 992px) {
+    max-width: 450px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 400px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    max-width: 320px;
+  }
 }
