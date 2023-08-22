@@ -1,7 +1,7 @@
 // styles
 import "./Technology.scss";
 
-import { technology } from "../../data/technology.json";
+import technology from "../../data/technology.json";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import useParams from "../../helpers/useParams";
@@ -17,7 +17,7 @@ const Technology = () => {
   };
 
   return (
-    <section className="technology">
+    <section className="technology slide-up">
       <div className="container">
         <h2 className="technology__title title">
           <b>03</b> SPACE LAUNCH 101

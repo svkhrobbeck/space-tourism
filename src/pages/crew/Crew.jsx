@@ -1,7 +1,7 @@
 // styles
 import "./Crew.scss";
 
-import { crew } from "../../data/crew.json";
+import crew from "../../data/crew.json";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import useParams from "../../helpers/useParams";
@@ -18,7 +18,7 @@ const Crew = () => {
 
   selectedCrew;
   return (
-    <section className="crew">
+    <section className="crew slide-up">
       <div className="container">
         <h2 className="crew__title title">
           <b>02</b> Meet your crew

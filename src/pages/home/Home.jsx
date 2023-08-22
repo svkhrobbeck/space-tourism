@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <section className="explore">
+    <section className="explore slide-up">
       <div className="container explore__container">
         <div className="explore__content">
           <h2 className="explore__title">so, you want to travel to</h2>
