@@ -5,6 +5,7 @@ import technology from "../../data/technology.json";
 import { useSearchParams } from "react-router-dom";
 import { Fragment, useState } from "react";
 import useParams from "../../helpers/useParams";
+import { Helmet } from "react-helmet";
 
 const Technology = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,6 +19,10 @@ const Technology = () => {
 
   return (
     <section className="technology slide-up">
+      <Helmet>
+        <title>Space Tourism | Technology</title>
+      </Helmet>
+
       <div className="container">
         <h2 className="technology__title title">
           <b>03</b> SPACE LAUNCH 101
@@ -49,7 +54,9 @@ const Technology = () => {
           {technology.map(item => (
             <Fragment key={item.name}>
               <img
-                className={`technology__img technology__img--portrait ${selectedTechnology.name === item.name ? "fade-in" : "visually-hidden"}`}
+                className={`technology__img technology__img--portrait ${
+                  selectedTechnology.name === item.name ? "fade-in" : "visually-hidden"
+                }`}
                 src={item.images.portrait}
                 alt={item.name}
                 srcSet={item.images.portrait2x}

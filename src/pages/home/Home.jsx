@@ -1,4 +1,5 @@
 // styles
+import { Helmet } from "react-helmet";
 import "./Home.scss";
 
 import { Link } from "react-router-dom";
@@ -6,6 +7,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="explore slide-up">
+      <Helmet>
+        <title>Space Tourism | Home</title>
+      </Helmet>
+
       <div className="container explore__container">
         <div className="explore__content">
           <h2 className="explore__title">so, you want to travel to</h2>

@@ -5,6 +5,7 @@ import destinations from "../../data/destination.json";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import useParams from "../../helpers/useParams";
+import { Helmet } from "react-helmet";
 
 const Destination = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,6 +19,10 @@ const Destination = () => {
 
   return (
     <section className="destination slide-up">
+      <Helmet>
+        <title>Space Tourism | Destination</title>
+      </Helmet>
+
       <div className="container">
         <h2 className="destination__title title">
           <b>01</b> Pick your destination

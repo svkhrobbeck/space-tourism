@@ -5,6 +5,7 @@ import crew from "../../data/crew.json";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import useParams from "../../helpers/useParams";
+import { Helmet } from "react-helmet";
 
 const Crew = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -19,6 +20,10 @@ const Crew = () => {
   selectedCrew;
   return (
     <section className="crew slide-up">
+      <Helmet>
+        <title>Space Tourism | Crew</title>
+      </Helmet>
+
       <div className="container">
         <h2 className="crew__title title">
           <b>02</b> Meet your crew
