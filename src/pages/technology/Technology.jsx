@@ -3,7 +3,7 @@ import "./Technology.scss";
 
 import technology from "../../data/technology.json";
 import { useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import useParams from "../../helpers/useParams";
 
 const Technology = () => {
@@ -35,24 +35,35 @@ const Technology = () => {
                 </li>
               ))}
             </ul>
-            <div className="technology__content">
-              <span className="technology__terminology">the temrinology…</span>
-              <h2 className="technology__name">{selectedTechnology.name}</h2>
-              <p className="technology__desc">{selectedTechnology.description}</p>
-            </div>
+            {technology.map(item => (
+              <div
+                className={`technology__content ${selectedTechnology.name === item.name ? "fade" : "visually-hidden"}`}
+                key={item.description}
+              >
+                <span className="technology__terminology">the temrinology…</span>
+                <h2 className="technology__name">{selectedTechnology.name}</h2>
+                <p className="technology__desc">{selectedTechnology.description}</p>
+              </div>
+            ))}
           </div>
-          <img
-            className="technology__img technology__img--portrait"
-            src={selectedTechnology.images.portrait}
-            alt={selectedTechnology.name}
-            srcSet={selectedTechnology.images.portrait2x}
-          />
-          <img
-            className="technology__img technology__img--landscape"
-            src={selectedTechnology.images.landscape}
-            alt={selectedTechnology.name}
-            srcSet={selectedTechnology.images.landscape2x}
-          />
+          {technology.map(item => (
+            <Fragment key={item.name}>
+              <img
+                className={`technology__img technology__img--portrait ${selectedTechnology.name === item.name ? "fade-in" : "visually-hidden"}`}
+                src={item.images.portrait}
+                alt={item.name}
+                srcSet={item.images.portrait2x}
+              />
+              <img
+                className={`technology__img technology__img--landscape ${
+                  selectedTechnology.name === item.name ? "slide-up" : "visually-hidden"
+                }`}
+                src={item.images.landscape}
+                alt={item.name}
+                srcSet={item.images.landscape2x}
+              />
+            </Fragment>
+          ))}
         </div>
       </div>
     </section>
