@@ -30,14 +30,21 @@ const Crew = () => {
         </h2>
         <div className="container--mini crew__container">
           {crew.map(item => (
-            <div key={item.role} className={`crew__content ${selectedCrew.name === item.name ? "fade-in" : "visually-hidden"}`}>
+            <div
+              key={item.role}
+              className={`crew__content ${
+                selectedCrew.name === item.name ? "fade-in" : "visually-hidden"
+              }`}
+            >
               <h2 className="crew__role">{selectedCrew.role}</h2>
               <h3 className="crew__name">{selectedCrew.name}</h3>
               <p className="crew__bio">{selectedCrew.bio}</p>
               <ul className="crew__paginations list">
                 {crew.map(item => (
                   <li
-                    className={`crew__pagination ${selectedCrew.name === item.name ? "active" : ""}`}
+                    className={`crew__pagination ${
+                      selectedCrew.name === item.name ? "active" : ""
+                    }`}
                     key={item.name}
                     onClick={() => handleSetCrew(item)}
                   />
@@ -48,7 +55,9 @@ const Crew = () => {
           {crew.map(item => (
             <img
               key={item.name}
-              className={`crew__img ${selectedCrew.name === item.name ? "slide-up" : "visually-hidden"}`}
+              className={`crew__img ${
+                selectedCrew.name === item.name ? "slide-up" : "visually-hidden"
+              }`}
               src={item.images.png}
               alt={item.name}
               srcSet={`${item.images.png} 1x, ${item.images.png2x} 2x`}

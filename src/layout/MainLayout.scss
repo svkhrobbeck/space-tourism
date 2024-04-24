@@ -30,6 +30,7 @@
   }
 
   &--crew {
+    overflow: hidden;
     background-image: url("../images/crew-bg.jpg");
 
     @media only screen and (max-width: 768px) {
