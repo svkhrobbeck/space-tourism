@@ -12,9 +12,7 @@ const MainLayout = () => {
   return (
     <div className={`bg ${setBg(pathname)}`}>
       <Header />
-      <main className="main-content">
-        <Router />
-      </main>
+      <Router />
     </div>
   );
 };

@@ -15,9 +15,18 @@ const Header = () => {
     <header className="site-header">
       <div className="site-header__container">
         <Link className="site-header__logo logo" to="/" onClick={closeSitenav}>
-          <img className="logo__img" src="/logo.svg" alt="Space tourism logo" width={48} height={48} />
+          <img
+            className="logo__img"
+            src="/logo.svg"
+            alt="Space tourism logo"
+            width={48}
+            height={48}
+          />
         </Link>
-        <button className={`button site-header__toggler ${isOpen ? "site-header__toggler--open" : ""}`} onClick={toggleSitenav}>
+        <button
+          className={`button site-header__toggler ${isOpen ? "site-header__toggler--open" : ""}`}
+          onClick={toggleSitenav}
+        >
           <span className="site-header__toggler-inner"></span>
           <span className="site-header__toggler-inner"></span>
           <span className="site-header__toggler-inner"></span>
