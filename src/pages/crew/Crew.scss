@@ -95,6 +95,12 @@
   font-family: Barlow;
   font-size: 18px;
   line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 
   @media only screen and (max-width: 992px) {
     font-size: 17px;
@@ -157,19 +163,19 @@
 }
 
 .crew__img {
-  max-width: 550px;
+  max-width: 520px;
   width: 100%;
   height: auto;
 
   @media only screen and (max-width: 992px) {
-    max-width: 450px;
+    max-width: 440px;
   }
 
   @media only screen and (max-width: 768px) {
-    max-width: 400px;
+    max-width: 380px;
   }
 
   @media only screen and (max-width: 576px) {
-    max-width: 320px;
+    max-width: 300px;
   }
 }
