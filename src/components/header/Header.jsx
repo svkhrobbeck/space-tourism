@@ -1,9 +1,9 @@
-// styles
-import "./Header.scss";
-
-import { Link, NavLink } from "react-router-dom";
-import { sitenavLinks } from "../../helpers/constants";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+import { sitenavLinks } from "../../helpers/constants";
+
+import "./Header.scss";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

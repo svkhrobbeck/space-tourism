@@ -1,11 +1,10 @@
-// styles
-import "./Technology.scss";
+import { Fragment, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import technology from "../../data/technology.json";
-import { useSearchParams } from "react-router-dom";
-import { Fragment, useState } from "react";
 import useParams from "../../helpers/useParams";
-import { Helmet } from "react-helmet";
+import "./Technology.scss";
 
 const Technology = () => {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -1,8 +1,7 @@
-// styles
 import { Helmet } from "react-helmet";
-import "./Home.scss";
-
 import { Link } from "react-router-dom";
+
+import "./Home.scss";
 
 const Home = () => {
   return (

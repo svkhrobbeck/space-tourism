@@ -1,23 +1,21 @@
-// styles
-import "./Crew.scss";
+import { useState } from "react";
+import { Helmet } from "react-helmet";
+import useParams from "../../helpers/useParams";
+import { useSearchParams } from "react-router-dom";
 
 import crew from "../../data/crew.json";
-import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import useParams from "../../helpers/useParams";
-import { Helmet } from "react-helmet";
+import "./Crew.scss";
 
 const Crew = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const selected = crew.find(item => item.name === searchParams.get("name"));
   const [selectedCrew, setSelectedCrew] = useState(selected || crew[0]);
+  const selected = crew.find(item => item.name === searchParams.get("name"));
 
   const handleSetCrew = crew => {
     setSearchParams(useParams(searchParams, "name", crew.name));
     setSelectedCrew(crew);
   };
 
-  selectedCrew;
   return (
     <main>
       <section className="crew slide-up">
