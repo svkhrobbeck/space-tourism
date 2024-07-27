@@ -116,7 +116,9 @@
   letter-spacing: 2px;
   outline: 0 solid rgba(255, 255, 255, 0.11);
   outline-offset: 0;
-  transition: outline 0.3s ease, opacity 0.3s ease;
+  transition:
+    outline 0.3s ease,
+    opacity 0.3s ease;
 
   &:hover {
     outline-width: 88px;

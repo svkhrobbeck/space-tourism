@@ -1,84 +1,80 @@
 import { Fragment, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import cx from "classnames";
+import { useNavigate } from "react-router-dom";
 
 import technology from "../../data/technology.json";
-import useParams from "../../helpers/useParams";
+
 import "./Technology.scss";
+import { Seo } from "../../layouts/seo";
 
 const Technology = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const selected = technology.find(item => item.name === searchParams.get("name"));
-  const [selectedTechnology, setSelectedTechnology] = useState(selected || technology[0]);
+  const navigate = useNavigate();
+  const [selected, setSelected] = useState(technology[0]);
 
   const handleSetTechnology = tech => {
-    setSearchParams(useParams(searchParams, "name", tech.name));
-    setSelectedTechnology(tech);
+    navigate(`?name=${tech.name}`);
+    setSelected(tech);
   };
 
   return (
-    <main>
-      <section className="technology slide-up">
-        <Helmet>
-          <title>Space Tourism | {selectedTechnology.name}</title>
-        </Helmet>
-
-        <div className="container">
-          <h2 className="technology__title title">
-            <b>03</b> SPACE LAUNCH 101
-          </h2>
-          <div className="technology__container">
-            <div className="technology__inner">
-              <ul className="technology__tabs list">
-                {technology.map((item, idx) => (
-                  <li
-                    className={`technology__tab ${
-                      selectedTechnology.name === item.name ? "active" : ""
-                    }`}
-                    key={item.name}
-                    onClick={() => handleSetTechnology(item)}
+    <Seo title={`Space Tourism | ${selected.name}`}>
+      <main>
+        <section className="technology slide-up">
+          <div className="container">
+            <h2 className="technology__title title">
+              <b>03</b> SPACE LAUNCH 101
+            </h2>
+            <div className="technology__container">
+              <div className="technology__inner">
+                <ul className="technology__tabs list">
+                  {technology.map((item, idx) => (
+                    <li
+                      className={cx("technology__tab", selected.name === item.name && "active")}
+                      key={item.name}
+                      onClick={() => handleSetTechnology(item)}
+                    >
+                      {idx + 1}
+                    </li>
+                  ))}
+                </ul>
+                {technology.map(item => (
+                  <div
+                    className={cx("technology__content", selected.name === item.name ? "fade" : "sr-only")}
+                    key={item.description}
                   >
-                    {idx + 1}
-                  </li>
+                    <span className="technology__terminology">the temrinology…</span>
+                    <h2 className="technology__name">{selected.name}</h2>
+                    <p className="technology__desc">{selected.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
               {technology.map(item => (
-                <div
-                  className={`technology__content ${
-                    selectedTechnology.name === item.name ? "fade" : "visually-hidden"
-                  }`}
-                  key={item.description}
-                >
-                  <span className="technology__terminology">the temrinology…</span>
-                  <h2 className="technology__name">{selectedTechnology.name}</h2>
-                  <p className="technology__desc">{selectedTechnology.description}</p>
-                </div>
+                <Fragment key={item.name}>
+                  <img
+                    className={cx(
+                      "technology__img technology__img--portrait",
+                      selected.name === item.name ? "fade-in" : "sr-only",
+                    )}
+                    src={item.images.portrait}
+                    alt={item.name}
+                    srcSet={`${item.images.portrait} 1x, ${item.images.portrait2x} 2x`}
+                  />
+                  <img
+                    className={cx(
+                      "technology__img technology__img--landscape",
+                      selected.name === item.name ? "slide-up" : "sr-only",
+                    )}
+                    src={item.images.landscape}
+                    alt={item.name}
+                    srcSet={`${item.images.landscape} 1x, ${item.images.landscape2x} 2x`}
+                  />
+                </Fragment>
               ))}
             </div>
-            {technology.map(item => (
-              <Fragment key={item.name}>
-                <img
-                  className={`technology__img technology__img--portrait ${
-                    selectedTechnology.name === item.name ? "fade-in" : "visually-hidden"
-                  }`}
-                  src={item.images.portrait}
-                  alt={item.name}
-                  srcSet={`${item.images.portrait} 1x, ${item.images.portrait2x} 2x`}
-                />
-                <img
-                  className={`technology__img technology__img--landscape ${
-                    selectedTechnology.name === item.name ? "slide-up" : "visually-hidden"
-                  }`}
-                  src={item.images.landscape}
-                  alt={item.name}
-                  srcSet={`${item.images.landscape} 1x, ${item.images.landscape2x} 2x`}
-                />
-              </Fragment>
-            ))}
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </Seo>
   );
 };
 

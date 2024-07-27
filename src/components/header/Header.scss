@@ -96,7 +96,9 @@
   width: 24px;
   height: 3px;
   background-color: var(--text-color);
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
 }
 
 .sitenav {

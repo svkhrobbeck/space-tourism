@@ -1,7 +1,8 @@
-/* FONTS */
+// FONTS
 @font-face {
   font-family: "Bellefair";
-  src: url("../fonts/Bellefair-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/Bellefair-Regular.woff2") format("woff2"),
     url("../fonts/Bellefair-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -10,7 +11,8 @@
 
 @font-face {
   font-family: "Barlow Condensed";
-  src: url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"),
     url("../fonts/BarlowCondensed-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -19,7 +21,8 @@
 
 @font-face {
   font-family: "Barlow Condensed";
-  src: url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"),
+  src:
+    url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"),
     url("../fonts/BarlowCondensed-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -28,19 +31,20 @@
 
 @font-face {
   font-family: "Barlow";
-  src: url("../fonts/Barlow-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/Barlow-Regular.woff2") format("woff2"),
     url("../fonts/Barlow-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* CUSTOM PROPS */
+// CUSTOM PROPS
 :root {
   --text-color: #d0d6f9;
 }
 
-/* GENERAL */
+// GENERAL
 html {
   height: 100%;
   box-sizing: border-box;
@@ -71,7 +75,7 @@ body {
   margin: 0;
 }
 
-/* CONTAINER */
+// CONTAINER
 .container {
   width: 100%;
   max-width: 1415px;
@@ -84,8 +88,7 @@ body {
   }
 }
 
-/* VISUALLY HIDDEN */
-.visually-hidden {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -160,7 +163,9 @@ body {
   animation-duration: 0.7s;
   animation-iteration-count: 1;
   position: relative;
-  transition: opacity 0.7s ease, position 0.5s ease;
+  transition:
+    opacity 0.7s ease,
+    position 0.5s ease;
 }
 
 .fade {
