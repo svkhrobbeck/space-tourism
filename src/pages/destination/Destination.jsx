@@ -19,7 +19,7 @@ const Destination = () => {
   return (
     <Seo title={`Space Tourism | ${selected.name}`}>
       <main>
-        <section className="destination slide-up">
+        <section className="destination fade-in">
           <div className="container">
             <h2 className="destination__title title">
               <b>01</b> Pick your destination
@@ -28,7 +28,7 @@ const Destination = () => {
           <div className="destination__container container--mini">
             {destinations.map(destination => (
               <img
-                className={cx("destination__img", selected.name === destination.name ? "slide-up" : "sr-only")}
+                className={cx("destination__img", selected.name === destination.name ? "fade-in" : "sr-only")}
                 src={destination.images.png}
                 alt={destination.name}
                 srcSet={`${destination.images.png} 1x, ${destination.images.png2x} 2x`}

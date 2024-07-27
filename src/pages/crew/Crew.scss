@@ -11,9 +11,13 @@
   }
 }
 
+.crew__title {
+  margin-bottom: 80px;
+}
+
 .crew__container {
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   flex-grow: 1;
 
   @media only screen and (max-width: 992px) {
@@ -30,6 +34,7 @@
 .crew__content {
   display: flex;
   flex-direction: column;
+  max-width: 650px;
   padding-bottom: 94px;
   transform: translateY(-50px);
 
@@ -68,6 +73,9 @@
 
 .crew__name {
   margin-top: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-bottom: 27px;
   color: #fff;
   font-family: Bellefair;
@@ -90,15 +98,14 @@
 .crew__bio {
   margin-top: 0;
   margin-bottom: 80px;
-  max-width: 445px;
   font-family: Barlow;
   font-size: 18px;
   line-height: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 
   @media only screen and (max-width: 992px) {
@@ -162,9 +169,10 @@
 }
 
 .crew__img {
-  max-height: 600px;
+  max-height: 450px;
   width: auto;
-  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
 
   @media only screen and (max-width: 992px) {
     max-width: 570px;

@@ -3,7 +3,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #0b0d17 no-repeat center / cover;
+  background: #0b0d17 no-repeat center / cover fixed;
 
   &--home {
     background-image: url("../images/home-bg.jpg");

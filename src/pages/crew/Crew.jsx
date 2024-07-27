@@ -19,7 +19,7 @@ const Crew = () => {
   return (
     <Seo title={`Space Tourism | ${selected.name}`}>
       <main>
-        <section className="crew slide-up">
+        <section className="crew fade-in">
           <div className="container">
             <h2 className="crew__title title">
               <b>02</b> Meet your crew
@@ -47,7 +47,7 @@ const Crew = () => {
               {crew.map(item => (
                 <img
                   key={item.name}
-                  className={cx("crew__img", selected.name === item.name ? "slide-up" : "sr-only")}
+                  className={cx("crew__img", selected.name === item.name ? "fade-in" : "sr-only")}
                   src={item.images.png}
                   alt={item.name}
                   srcSet={`${item.images.png} 1x, ${item.images.png2x} 2x`}

@@ -19,7 +19,7 @@ const Technology = () => {
   return (
     <Seo title={`Space Tourism | ${selected.name}`}>
       <main>
-        <section className="technology slide-up">
+        <section className="technology fade-in">
           <div className="container">
             <h2 className="technology__title title">
               <b>03</b> SPACE LAUNCH 101
@@ -62,7 +62,7 @@ const Technology = () => {
                   <img
                     className={cx(
                       "technology__img technology__img--landscape",
-                      selected.name === item.name ? "slide-up" : "sr-only",
+                      selected.name === item.name ? "fade-in" : "sr-only",
                     )}
                     src={item.images.landscape}
                     alt={item.name}

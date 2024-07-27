@@ -7,14 +7,14 @@
 }
 
 .technology__title {
-  margin-bottom: 135px;
+  margin-bottom: 85px;
 
   @media only screen and (max-width: 1200px) {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 
   @media only screen and (max-width: 992px) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -185,14 +185,10 @@
   height: auto;
 
   &--portrait {
-    max-width: 515px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-30%);
-    right: 0;
+    max-width: 400px;
 
     @media only screen and (max-width: 1200px) {
-      max-width: 420px;
+      max-width: 320px;
     }
 
     @media only screen and (max-width: 992px) {

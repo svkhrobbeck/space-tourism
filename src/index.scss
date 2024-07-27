@@ -159,6 +159,7 @@ body {
 
 // animations
 .slide-up {
+  overflow: hidden;
   animation-name: slide-up;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
@@ -169,6 +170,7 @@ body {
 }
 
 .fade {
+  overflow: hidden;
   animation-name: fade;
   animation-duration: 1.4s;
   animation-iteration-count: 1;
@@ -190,7 +192,7 @@ body {
 
   to {
     opacity: 1;
-    bottom: 1;
+    bottom: 0;
   }
 }
 

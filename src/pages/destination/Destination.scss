@@ -28,7 +28,7 @@
 
 .destination__img {
   margin-right: 24px;
-  max-width: 445px;
+  max-width: 400px;
   width: 100%;
   height: auto;
 
@@ -67,11 +67,11 @@
   font-family: Barlow Condensed;
   letter-spacing: 2.7px;
   padding-bottom: 15px;
-  margin-bottom: 37px;
+  margin-bottom: 22px;
 
   @media only screen and (max-width: 992px) {
     justify-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 }
 
@@ -106,27 +106,27 @@
   text-transform: uppercase;
   color: #fff;
   font-family: Bellefair;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 400;
   line-height: normal;
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 
   @media only screen and (max-width: 768px) {
-    margin-bottom: 8px;
-    font-size: 80px;
+    font-size: 60px;
+    margin-bottom: 7px;
   }
 }
 
 .destination__desc {
   margin-top: 0;
-  margin-bottom: 54px;
-  font-size: 18px;
-  line-height: normal;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 45px;
 
   @media only screen and (max-width: 992px) {
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 
@@ -134,7 +134,7 @@
   height: 1px;
   width: 100%;
   background-color: #383b4b;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .info-planet-destination {
@@ -147,7 +147,7 @@
   }
 }
 
-.info__planet-destination__title {
+.info-planet-destination__title {
   text-transform: uppercase;
   font-family: Barlow Condensed;
   font-size: 14px;
