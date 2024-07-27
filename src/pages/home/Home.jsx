@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Seo title="Space Tourism | Home">
       <main className="home">
-        <section className="explore slide-up">
+        <section className="explore fade-in">
           <div className="container explore__container">
             <div className="explore__content">
               <h2 className="explore__title">so, you want to travel to</h2>

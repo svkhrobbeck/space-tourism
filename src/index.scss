@@ -165,29 +165,28 @@ main {
 
 // animations
 .slide-up {
-  overflow: hidden;
   animation-name: slide-up;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
   position: relative;
   transition:
-    opacity 0.7s ease,
-    position 0.5s ease;
+    opacity 1s ease,
+    position 1s ease;
 }
 
 .fade {
   overflow: hidden;
   animation-name: fade;
-  animation-duration: 1.4s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 1.5s ease;
 }
 
 .fade-in {
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
-  transition: opacity 0.6s ease;
+  transition: opacity 1s ease;
 }
 
 @keyframes slide-up {
